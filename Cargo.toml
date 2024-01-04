@@ -1,0 +1,14 @@
+[package]
+name = "dt-dashboard"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum = "0.7.3"
+axum-extra = "0.9.1"
+handlebars = "5.0.0"
+include_dir = "0.7.3"
+tokio = { version = "1.35.1", features = ["full"] }
+tower-http = { version = "0.5.0", features = ["fs", "trace"] }

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Meta -->
+    <meta name="description" content="Admin Templates & Dashboard UI Kits" />
+    <meta name="author" content="Bootstrap Gallery" />
+    <link rel="shortcut icon" href="{{ url }}/assets/img/cms_logo.png" />
+
+    <!-- Title -->
+    <title>CMS DT Dashboard</title>
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="{{ url }}/assets/css/bootstrap.min.css" />
+
+    <!-- Icomoon Font Icons css -->
+    <link rel="stylesheet" href="{{ url }}/assets/fonts/style.css" />
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{{ url }}/assets/css/main.min.css" />
+
+    <!-- DateRange css -->
+    <!-- <link rel="stylesheet" href="vendor/daterange/daterange.css" /> -->
+
+    <!-- ECharts -->
+    <script src="{{ url }}/assets/js/echarts.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Page wrapper start -->
+    <div class="page-wrapper">
+      <!-- Sidebar wrapper start -->
+      <nav id="sidebar" class="sidebar-wrapper">
+        <!-- Sidebar brand start  -->
+        <div class="sidebar-brand">
+          <a href="index.html" class="logo">
+            <img
+              src="{{ url }}/assets/img/cms_logo.png"
+              alt="CMS DT Dashboard"
+            />
+          </a>
+          <a href="index.html" class="logo-sm">
+            <img
+              src="{{ url }}/assets/img/cms_logo.png"
+              alt="CMS DT Dashboard"
+            />
+          </a>
+        </div>
+        <!-- Sidebar brand end  -->
+
+        <!-- Sidebar content start -->
+        <div class="sidebar-content">
+          <!-- sidebar menu start -->
+          <div class="sidebar-menu">
+            <ul>
+              <!-- <li class="header-menu">General</li> -->
+              <li class="sidebar-dropdown active">
+                <a href="#">
+                  <i class="icon-devices_other"></i>
+                  <span class="menu-text">Dashboards</span>
+                </a>
+                <div class="sidebar-submenu">
+                  <ul>
+                    <li>
+                      <a href="dt_dashboard.html">Summary </a>
+                    </li>
+                    <li>
+                      <a href="dt_dashboard.html">HV </a>
+                    </li>
+                    <li>
+                      <a href="dt_dashboard.html">LV </a>
+                    </li>
+                    <li>
+                      <a href="dt_dashboard.html">Gas </a>
+                    </li>
+                    <li>
+                      <a href="dt_dashboard.html">Env </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="links.html">
+                  <i class="icon-documents"></i>
+                  <span class="menu-text">Links</span>
+                </a>
+              </li>
+              <li>
+                <a href="contacts.html">
+                  <i class="icon-phone1"></i>
+                  <span class="menu-text">Contacts</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- sidebar menu end -->
+        </div>
+        <!-- Sidebar content end -->
+      </nav>
+      <!-- Sidebar wrapper end -->
+
+      <!-- Page content start  -->
+      <div class="page-content">
+        <!-- Header start -->
+        <header class="header">
+          <div class="toggle-btns">
+            <a id="toggle-sidebar" href="#">
+              <i class="icon-list"></i>
+            </a>
+            <a id="pin-sidebar" href="#">
+              <i class="icon-list"></i>
+            </a>
+          </div>
+          <div class="header-items">
+            <!-- Header actions start -->
+            <ul class="header-actions">
+              <b>CMS DT Dashboard</b>
+            </ul>
+            <!-- Header actions end -->
+          </div>
+        </header>
+        <!-- Header end -->
+
+        <!-- Page header start -->
+        <div class="page-header">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">Dashboards</li>
+            <li class="breadcrumb-item active">HV</li>
+          </ol>
+          <ul class="app-actions">
+            <li>
+              <a
+                href="#"
+                data-toggle="tooltip"
+                data-placement="top"
+                title=""
+                data-original-title="Copy Link"
+              >
+                <i class="icon-airplay"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Page header end -->
+
+        <!-- Main container start -->
+        <div class="main-container">
+          <!-- Row starts -->
+          <div class="row gutters">
+            <div class="col-sm-12">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-title">{{ name }}</div>
+                </div>
+                <div class="card-body"></div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-title">W+2/MB4/S02</div>
+                </div>
+                <div class="card-body">
+                  <div id="main" style="width: 600px; height: 400px"></div>
+                  <script type="text/javascript">
+                    // Initialize the echarts instance based on the prepared dom
+                    var myChart = echarts.init(document.getElementById("main"));
+
+                    // Specify the configuration items and data for the chart
+                    var option = {
+                      title: {
+                        text: "ECharts Getting Started Example",
+                      },
+                      tooltip: {},
+                      legend: {
+                        data: ["sales"],
+                      },
+                      xAxis: {
+                        data: [
+                          "Shirts",
+                          "Cardigans",
+                          "Chiffons",
+                          "Pants",
+                          "Heels",
+                          "Socks",
+                        ],
+                      },
+                      yAxis: {},
+                      series: [
+                        {
+                          name: "sales",
+                          type: "bar",
+                          data: [5, 20, 36, 10, 10, 20],
+                        },
+                      ],
+                    };
+
+                    // Display the chart using the configuration items and data just specified.
+                    myChart.setOption(option);
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Row ends -->
+        </div>
+        <!-- Main container end -->
+      </div>
+      <!-- Page content end -->
+    </div>
+    <!-- Page wrapper end -->
+
+    <!--**************************
+			**************************
+				**************************
+							Required JavaScript Files
+				**************************
+			**************************
+		**************************-->
+    <!-- Required jQuery first, then Bootstrap Bundle JS -->
+    <script src="{{ url }}/assets/js/jquery.min.js"></script>
+    <script src="{{ url }}/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url }}/assets/js/moment.js"></script>
+
+    <!-- *************
+			************ Vendor Js Files *************
+		************* -->
+    <!-- Slimscroll JS -->
+    <script src="{{ url }}/assets/vendor/slimscroll/slimscroll.min.js"></script>
+    <script src="{{ url }}/assets/vendor/slimscroll/custom-scrollbar.js"></script>
+
+    <!-- Daterange -->
+    <script src="{{ url }}/assets/vendor/daterange/daterange.js"></script>
+    <script src="{{ url }}/assets/vendor/daterange/custom-daterange.js"></script>
+
+    <!-- Main JS -->
+    <script src="{{ url }}/assets/js/main.js"></script>
+  </body>
+</html>
